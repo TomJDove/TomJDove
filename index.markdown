@@ -14,7 +14,7 @@ layout: home
 
 I'm a PhD student at the University of Göttingen, working under the supervision of Thomas Schick. 
 
-In plain language, I study the underlying shape and symmetries of spacetime models in string theory and the mathematical structures the classify their properties.
+In plain language, I study the underlying shape and symmetry of spacetime models and the mathematical structures that classify their properties.
 
 More precisely, my research interests lie in algebraic topology, in particular twisted K-theory and topological T-duality.
 My thesis is about the equivariant versions of these concepts.
