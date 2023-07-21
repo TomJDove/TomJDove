@@ -24,7 +24,7 @@ You can also do some calculations; for example, three are currently almost 45,00
 <center>
 <figure>
   <img
-  src="/assets/journal-ref.png"
+  src="assets/journal-ref.png"
   style="width:100%"
   >
   <figcaption>
@@ -88,7 +88,7 @@ Let's first look at the gender division of all of the authors:
 <center>
 <figure>
   <img
-  src="/assets/total-gender-prop.png"
+  src="assets/total-gender-prop.png"
   style="width:75%" 
   >
   <figcaption>
@@ -111,7 +111,7 @@ If we consider the change in proportions over time, there is some room for optim
 <center>
 <figure>
   <img
-  src="/assets/gender-by-year.png"
+  src="assets/gender-by-year.png"
   >
   <figcaption>Gender proportion over time</figcaption>
 </figure>
@@ -122,7 +122,7 @@ If we graph only the proportion of women then we see that we have a steady incre
 <center>
 <figure>
   <img
-  src="/assets/women-trend.png"
+  src="assets/women-trend.png"
   >
   <figcaption>
   The number of female authors is increasing!
