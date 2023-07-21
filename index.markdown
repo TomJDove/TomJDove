@@ -1,13 +1,12 @@
 ---
-# Feel free to add content and custom Front Matter to this file.
-# To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
-
 layout: home
 ---
 
-
-
+<!--
 ![profilepic](docs/assets/profile.png){: width="300" style="float: left; margin-right: 3em;"}
+-->
+
+![ytmpic](docs/assets/ytm2.jpg){: width="80%" style="display: block; margin: 0 auto"}
 
 
 ## About 
@@ -19,9 +18,8 @@ In plain language, I study the underlying shape and symmetry of spacetime models
 More precisely, my research interests lie in algebraic topology, in particular twisted K-theory and topological T-duality.
 My thesis is about the equivariant versions of these concepts.
 
-<br>
-
 I will be completing my PhD in September, after which I will move out of academia.
+
 
 ## Papers
 
@@ -32,5 +30,6 @@ I will be completing my PhD in September, after which I will move out of academi
 - Equivariant T-duality (in progress)
 
 - [Twisted Equivariant Tate K-Theory](https://arxiv.org/abs/1912.02374) (Masters thesis)
+
 
 
