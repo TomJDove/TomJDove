@@ -20,7 +20,7 @@ First established in 1991, it now holds over 2 million scholarly articles, and a
 To make ArXiv more accessible, Cornell has shared the metadata of its submissions on [Kaggle](https://www.kaggle.com/datasets/Cornell-University/arxiv).
 Here, you can view information about each of the 1.7 million submissions, including the title, abstract, author names, and submission date.
 You can also do some calculations; for example, three are currently almost 45,000 mathematics papers uploaded each year:
-
+![journal-ref](/assets/journal-ref.png)
 <center>
 <figure>
   <img
