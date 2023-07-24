@@ -144,7 +144,7 @@ I will therefore describe the process:
 1. Data was collected from Kaggle in the form of a .json file.
 2. Python (Pandas) was used to filter out the mathematics submissions and process the data into tables.
 This included parsing the author names, guessing their gender, and assigning author ids to serve as the primary key.
-![arxiv-db](/assets/arxiv-db.png){: style="display: block; margin: 0 auto"}
+![arxiv-db](https://tomjdove.github.io/TomJDove/assets/arxiv-db.png){: style="display: block; margin: 0 auto"}
 3. The tables were loaded into Power BI desktop, which was used to create the visuals.
 The Power BI report can be found [here](https://app.powerbi.com/links/RDRqrHuPyW?ctid=149053c5-55e1-4229-a5b9-0efb72205d64&pbi_source=linkShare).
 
