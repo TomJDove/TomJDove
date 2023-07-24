@@ -24,11 +24,11 @@ You can also do some calculations; for example, three are currently almost 45,00
 <center>
 <figure>
   <img
-  src="./assets/journal-ref.png"
+  src="https://tomjdove.github.io/TomJDove/assets/journal-ref.png"
   style="width:100%"
   >
   <figcaption>
-    TEST: More submissions, but fewer journal publications
+    More submissions, but fewer journal publications
   </figcaption>
 </figure>
 </center>
