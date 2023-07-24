@@ -116,7 +116,7 @@ If we consider the change in proportions over time, there is some room for optim
 </figure>
 </center>
 
-If we graph only the proportion of women then we see that we have a steady increase:
+If we graph only the proportion of women then we see a steady increase:
 
 <center>
 <figure>
