@@ -88,7 +88,7 @@ Let's first look at the gender division of all of the authors:
 <center>
 <figure>
   <img
-  src="/assets/total-gender-prop.png"
+  src="https://tomjdove.github.io/TomJDove/assets/total-gender-prop.png"
   style="width:75%" 
   >
   <figcaption>
@@ -111,7 +111,7 @@ If we consider the change in proportions over time, there is some room for optim
 <center>
 <figure>
   <img
-  src="/assets/gender-by-year.png"
+  src="https://tomjdove.github.io/TomJDove/assets/gender-by-year.png"
   >
   <figcaption>Gender proportion over time</figcaption>
 </figure>
@@ -122,7 +122,7 @@ If we graph only the proportion of women then we see that we have a steady incre
 <center>
 <figure>
   <img
-  src="/assets/women-trend.png"
+  src="https://tomjdove.github.io/TomJDove/assets/women-trend.png"
   >
   <figcaption>
   The number of female authors is increasing!
