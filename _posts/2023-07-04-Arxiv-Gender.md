@@ -33,7 +33,7 @@ You can also do some calculations; for example, there are currently almost 45,00
 </figure>
 </center>
 
-There are some cool observations to be made in this trove of data.
+There are other cool observations to be made in this trove of data.
 For example, of the 594,000ish total submissions, almost a quarter had journal references, which means they were likely published in a peer-reviewed journal.
 Even more interestingly, the annual proportion of submissions with journal references has dramatically declined in the last two decades.
 As we see in the above chart, it starts at around 40% and has plummeted to below 10%.
@@ -51,7 +51,7 @@ An author does not submit their gender when uploading a paper, so it doesn't see
 Gender inequality is a well-known issue in STEM, and it is especially serious in mathematics.
 Despite girls performing as well if not better than boys in maths at school, the proportion of women studying and working in mathematical sciences is significantly lower than it ought to be.
 
-If we look at the numbers, the problem is quite visible:
+If we look at the numbers for Australia, the problem is quite visible:
  - Women make up only 37% of undergraduate mathematical science degrees and 29% of postgraduate degrees, according to [STEM Women](https://www.stemwomen.com/women-in-stem-australia).
 - [Government data](https://labourmarketinsights.gov.au/occupation-profile/mathematicians?occupationCode=224112) reveals that women make up only 23% of mathematicians.
 - Only [9% of professors](https://www.sydney.edu.au/news-opinion/news/2016/03/30/australia_s-got-scientific-female-talent---heres-how-to-stop-was.html) in mathematical science are women.
@@ -63,7 +63,7 @@ We only have one piece of information that could indicate an author's gender: th
 ## Getting on a first-name basis
 
 The idea is to use the first names of the authors to get a very (repeat *very*) crude idea of the gender disparity in ArXiv postings.
-I figure that, for certain names, one could take a reasonable guess at what gender this person identifies as.
+I figure that, for certain names, one could take a reasonable guess at which gender this person identifies as.
 If an author's name is Thomas, for example, they will probably (if not necessarily) identify as a man.
 
 There are indeed commercially available tools to achieve this.
@@ -71,7 +71,7 @@ There are indeed commercially available tools to achieve this.
 With thousands of names to process and a PhD student salary, I decided to use the freely available Python package [gender-guesser](https://github.com/lead-ratings/gender-guesser), which is based on a comparatively tiny dataset of 40,000 names collected by a man named Jorg Michael.
 
 The Python package assigns a name to one of five categories: male, mostly male, unknown, mostly female, and female.
-I simplified this to three categories: man, unknown, and woman, putting the 'mostly' entries being put into the unknown category.
+I simplified this to three categories: man, unknown, and woman, with the 'mostly' entries being put into the unknown category.
 
 Now, this method is riddled with flaws and limitations:
 - It excludes those who don't identify as either a man or a woman.
@@ -97,13 +97,12 @@ Let's first look at the gender division of all of the authors:
 </figure>
 </center>
 
-The first thing to notice is that 43% of the authors had first names which could not give us a reasonable guess.
-This means that their name couldn't be used to confidently guess a gender.
+The first thing to notice is that 43% of the names couldn't reasonably be used to guess a gender.
 Likely their name was androgynous, unknown, or entered as an initial.
 
 Otherwise, the difference is stark: 47% are men and 11% are women.
 Of the authors whose gender we could reasonably guess, less than 1 in 4 are women.
-It could be reasonable to assume the unknown authors have a similar gender split.
+It might be reasonable to assume the unknown authors have a similar gender split.
 If we generously assumed that the unknown authors were half men and half women, women would still only make up a third of authors.
 
 If we consider the change in proportions over time, there is some room for optimism:
@@ -117,7 +116,7 @@ If we consider the change in proportions over time, there is some room for optim
 </figure>
 </center>
 
-If we graph only the proportion of women then we see that we have a steady increase (except maybe it's flattened out?):
+If we graph only the proportion of women then we see that we have a steady increase:
 
 <center>
 <figure>
