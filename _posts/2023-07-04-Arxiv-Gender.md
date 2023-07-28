@@ -24,7 +24,7 @@ You can also do some calculations; for example, three are currently almost 45,00
 <center>
 <figure>
   <img
-  src="/assets/journal-ref.png"
+  src="https://tomjdove.github.io/TomJDove/assets/arxiv/journal-ref.png"
   style="width:100%"
   >
   <figcaption>
