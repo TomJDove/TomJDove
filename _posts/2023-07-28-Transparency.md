@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Who's Paying Our Pollies? A Peak into the Transparency Register"
+title: "Who's Paying Our Pollies? A Peak Into the Transparency Register"
 date: 2023-07-28
 categories: 
 ---
