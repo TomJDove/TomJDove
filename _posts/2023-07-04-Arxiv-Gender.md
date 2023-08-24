@@ -88,7 +88,7 @@ Let's first look at the gender division of all of the authors:
 <center>
 <figure>
   <img
-  src="https://tomjdove.github.io/TomJDove/assets/total-gender-prop.png"
+  src="https://tomjdove.github.io/TomJDove/assets/arxiv/total-gender-prop.png"
   style="width:75%" 
   >
   <figcaption>
@@ -110,7 +110,7 @@ If we consider the change in proportions over time, there is some room for optim
 <center>
 <figure>
   <img
-  src="https://tomjdove.github.io/TomJDove/assets/gender-by-year.png"
+  src="https://tomjdove.github.io/TomJDove/assets/arxiv/gender-by-year.png"
   >
   <figcaption>Gender proportion over time</figcaption>
 </figure>
@@ -121,7 +121,7 @@ If we graph only the proportion of women then we see a steady increase:
 <center>
 <figure>
   <img
-  src="https://tomjdove.github.io/TomJDove/assets/women-trend.png"
+  src="https://tomjdove.github.io/TomJDove/assets/arxiv/women-trend.png"
   >
   <figcaption>
   The number of female authors is increasing!
@@ -143,7 +143,7 @@ I will therefore describe the process:
 1. Data was collected from Kaggle in the form of a .json file.
 2. Python (Pandas) was used to filter out the mathematics submissions and process the data into tables.
 This included parsing the author names, guessing their gender, and assigning author IDs to serve as the primary key.
-![arxiv-db](https://tomjdove.github.io/TomJDove/assets/arxiv-db.png){: style="display: block; margin: 0 auto"}
+![arxiv-db](https://tomjdove.github.io/TomJDove/assets/arxiv/arxiv-db.png){: style="display: block; margin: 0 auto"}
 3. The tables were loaded into Power BI desktop, which was used to create the visuals.
 The Power BI report can be found [here](https://app.powerbi.com/links/RDRqrHuPyW?ctid=149053c5-55e1-4229-a5b9-0efb72205d64&pbi_source=linkShare).
 
