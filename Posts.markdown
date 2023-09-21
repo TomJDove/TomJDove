@@ -10,4 +10,4 @@ As a way of developing my data and writing skills, I've decided to undertake lit
 
 - [Who's Paying Our Pollies? A Peak Into the Transparency Register](https://tomjdove.github.io/TomJDove/2023/07/28/Transparency.html)
 
-
+- [Predicting AFL Matches](https://tomjdove.github.io/TomJDove/2023/07/03/AFL-Prediction.html)
