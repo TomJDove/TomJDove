@@ -18,7 +18,7 @@ In plain language, I studied the underlying shape and symmetry of spacetime mode
 More precisely, my research interests lie in algebraic topology, in particular twisted K-theory and topological T-duality.
 My thesis work is about the equivariant versions of these concepts.
 
-I will be returning to Melbourne in late November and will be seeking opportunities outside of academia.
+I return to Melbourne in late November and will be seeking opportunities outside of academia.
 
 
 ## Papers
