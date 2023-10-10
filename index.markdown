@@ -25,7 +25,7 @@ I return to Melbourne in late November and will be seeking opportunities outside
 
 - [A fixed point decomposition of twisted equivariant K-theory](https://arxiv.org/abs/2202.05788) (with Thomas Schick and Mario Velásquez). Proc. Amer. Math. Soc. 151 (2023), 4593-4606
 
-- A new approach to topological T-duality for principal torus bundles (with Thomas Schick)
+- [A new approach to topological T-duality for principal torus bundles](https://arxiv.org/abs/2104.05984) (with Thomas Schick)
 
 - Equivariant T-duality (with Thomas Schick)
 
