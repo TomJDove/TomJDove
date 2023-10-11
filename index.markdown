@@ -27,7 +27,7 @@ I return to Melbourne in late November and will be seeking opportunities outside
 
 - [A new approach to topological T-duality for principal torus bundles](https://arxiv.org/abs/2104.05984) (with Thomas Schick)
 
-- Equivariant T-duality (with Thomas Schick)
+- [Equivariant topological T-duality](https://arxiv.org/abs/2310.06064) (with Thomas Schick)
 
 - [Twisted Equivariant Tate K-Theory](https://arxiv.org/abs/1912.02374) (Masters thesis)
 
