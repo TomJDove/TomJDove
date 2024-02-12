@@ -8,7 +8,7 @@ layout: home
 
 ![ytmpic](docs/assets/ytm2.jpg){: width="80%" style="display: block; margin: 0 auto"}
 
-# About 
+# About
 
 <p align="justify">
 I just completed a PhD at the University of Göttingen, working under the supervision of Thomas Schick. 
@@ -25,13 +25,35 @@ I'm now back in Melbourne and looking for opportunities to apply my hard-earned 
 
 - [Drug use in Victoria - Excel dashboard](/portfolio/drugs-victoria)
 
-- [A Dive in the ArXiv: Gender Equality](/portfolio/arxiv-gender)
+- [A dive in the ArXiv: Determining gender inequality in mathematics using ArXiv data](/portfolio/arxiv-gender)
 
-- [Who's Paying Our Pollies? A Peak Into the Transparency Register](/portfolio/political-donations)
+- [Who's paying our pollies? A dashboard on political donations in Australia](/portfolio/political-donations)
 
-- [Predicting AFL Matches](/portfolio/afl-prediction)
+- [Predicting AFL matches - machine learning project](/portfolio/afl-prediction)
   
-- [AFL SQL Queries](/portfolio/afl-sql)
+- [AFL SQL queries](/portfolio/afl-sql)
+
+
+# Education
+
+- **Doctor of Philosophy (Mathematics)**, 2020-2023 \\
+University of Göttingen, Germany \\
+Authored three research articles and communicated findings in several talks.
+
+- **Master of Science (Mathematics and Statistics) (with distinction)**, 2018-2020\\
+University of Melbourne, Melbourne, Australia \\
+Average grade of 91%.
+
+- **Diploma of Informatics**, 2015-2017 \\
+University of Melbourne, Melbourne, Australia \\
+Included courses:
+    - Database Systems
+    - Software Modelling and Design
+    - Artificial Intelligence   
+&nbsp; 
+
+- **Bachelor of Science (Mathematics and Statistics)**, 2015-2017 \\
+University of Melbourne, Melbourne, Australia
 
 
 # Papers

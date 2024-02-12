@@ -39,7 +39,6 @@ Putting fun aside, I wanted to get something more meaningful from the ArXiv data
 Could this dataset give us any information on the gender balance in mathematics?
 An author does not submit their gender when uploading a paper, so it doesn't seem like we have much information to go on.
 
-
 ## Gender inequality in mathematics
 
 Gender inequality is a well-known issue in STEM, and it is especially serious in mathematics.
@@ -74,6 +73,195 @@ Now, this method is riddled with flaws and limitations:
 
 So, we certainly shouldn't be using this method to produce any hard quantitative conclusions.
 Nonetheless, if there's a very clear gender disparity, we might be able to pick up on it.
+
+
+## Data processing
+
+We need to process [ArXiv dataset](https://www.kaggle.com/datasets/Cornell-University/arxiv) from Kaggle into tables more suitable for data analysis (e.g. to add to a database or open in Power BI).
+
+The data begins as a single table with the ArXiv ID, submitter, authors, title, comments, journal reference, doi, report-no, categories, license, abstract, versions, update date, and a list of the authors in a parsed format.
+
+This data is processed into five tables:
+- Submission, to record the submissions themselves
+- Category, to record the categories a submission can be labelled as
+- Author, to record the authors of the papers
+- Submission-Category, to capture many-to-many relationship between a Submission and its Categories.
+- Submission-Author, to capture the many-to-many realtionship between Submission and Author.
+
+![arxiv-db](https://tomjdove.github.io/TomJDove/assets/arxiv/arxiv-db.png){: style="display: block; margin: 0 auto"}
+
+The dataset is quite large, so some of the computations take some time (but not 'leave your computer on overnight' time).
+All of the code can be viewed on [Github](https://github.com/TomJDove/ArXiv-Investigation).
+
+#### Step 1: Filtering out maths submissions
+
+The ArXiv dataset contains papers from a number of different sciences, but we only need the mathematics ones.
+
+```python
+# Determine whether a paper is a maths paper
+def isMathCategory(categories):
+    cats = categories.split(" ")
+    for cat in cats:
+        if cat[:cat.find(".")] == "math":
+            return True
+    return False
+
+# Load the relevant data from the ArXiv file with a given filter on the categories.
+# There is also the option to only load a selection of columns.
+def loadArxivData(file, catFilter = lambda x : True, cols=None):
+    f = open(file)
+    data = []
+    for line in f:
+        doc = json.loads(line)
+        if cols:
+            lst = [doc[col] for col in cols]
+        else:
+            lst = doc
+        if catFilter(doc['categories']):
+            data.append(lst)
+    f.close()
+    return pd.DataFrame(data=data, columns=cols)
+```
+
+```python
+# Load all the maths ArXiv data
+fileName = 'data/arxiv-metadata-oai-snapshot.json'
+arxiv_math = loadArxivData(fileName, catFilter = isMathCategory)
+
+# Save to csv so that we don't need to re-collect the data
+arxiv_math.to_csv('data/arxiv-math.csv', index=False)
+```
+
+#### Step 2: Submissions dataframe
+
+```python
+# Get date of first submisson
+arxiv_math['versions'] = arxiv_math['versions'].apply(eval)
+arxiv_math['submission_date'] = arxiv_math['versions'].apply(lambda x : datetime.date(parser.parse(x[0]['created'])))
+
+# Create submissions dataframe
+submission_cols = ['id', 'submission_date', 'title', 'abstract', 'journal-ref', 'comments']
+submission = arxiv_math[submission_cols].copy()
+submission.rename(columns={'id':'arxiv_id'})
+```
+
+#### Step 3: Category dataframe
+
+```python
+# Create the category table, starting with the category names and acronyms (to be used as a primary key)
+category_dict = {'AC':'Commutative Algebra',
+                'AG':'Algebraic Geometry',
+                'AP':'Analysis of PDEs',
+                'AT':'Algebraic Topology',
+                'CA':'Classicial Analysis and ODES',
+                'CO':'Combinatorics',
+                'CT':'Category Theory',
+                'CV':'Complex Variables',
+                'DG':'Differential Geometry',
+                'DS':'Dynamical Systems',
+                'FA':'Functional Analysis',
+                'GM':'General Mathematics',
+                'GN':'General Topology',
+                'GR':'Group Theory',
+                'GT':'Geometric Topology',
+                'HO':'History and Overview',
+                'IT':'Information Theory', 
+                'KT':'K-Theory and Homology',
+                'LO':'Logic',
+                'MG':'Metric Geometry',
+                'MP':'Mathematical Physics',
+                'NA':'Numerical Analysis',
+                'NT':'Number Theory',
+                'OA':'Operator Algebras',
+                'OC':'Optimization and Control',
+                'PR':'Probability',
+                'QA':'Quantum Algebra',
+                'RA':'Rings and Algebras',
+                'RT':'Representation Theory',
+                'SG':'Symplectic Geometry',
+                'SP':'Spectral Theory',
+                'ST':'Statistics Theory'}
+
+
+category = pd.DataFrame(category_dict.items(), columns = ['category_id', 'category_name'])
+category.to_csv('data/category.csv', index=False)
+```
+
+#### Step 4: Author dataframe
+
+```python
+# Create author table
+arxiv_math['authors_parsed'] = arxiv_math['authors_parsed'].apply(eval)
+
+names_list = arxiv_math['authors_parsed'].explode().to_list()
+unique_names = [name for name in set(tuple(x[:2]) for x in names_list)]
+
+author = pd.DataFrame()
+author['surname'] = pd.Series([name[0] for name in unique_names])
+author['first_name'] = pd.Series([name[1] for name in unique_names])
+
+# Make the index the author id
+author['author_id'] = author.index
+author = author[['author_id', 'surname', 'first_name']]
+```
+
+```python
+# Add genders
+names = [x.split(' ')[0] for x in author['first_name'].to_list()]
+unique_names2 = list(set(names))
+
+# Guess the genders of all the names and construct a dictionary
+d = gender.Detector()
+genders = [d.get_gender(name) for name in unique_names2]
+
+gender_dict = defaultdict(lambda :"unknown")
+for name, gender_ in zip(unique_names2, genders):
+    gender_dict[name] = gender_
+
+genders = [gender_dict[name] for name in names]
+
+author['gender'] = pd.Series(genders)
+author.loc[(author['gender'] != 'male') & (author['gender'] != 'female'),'gender'] = 'unknown'
+
+author.to_csv('author.csv', index=False)
+```
+
+#### Step 5: Submission-author dataframe
+
+```python
+# Create a dict to map author name to index
+author_dict = dict(zip(unique_names, author['author_id'].to_list()))
+
+for name in unique_names[:5]:
+    print(name, author_dict[name])
+
+# Create submission-author dataframe
+
+submission_author = arxiv_math[['id', 'authors_parsed']].copy().explode('authors_parsed')
+submission_author['author_id'] = submission_author['authors_parsed'].apply(lambda x : author_dict[tuple(x[:2])])
+submission_author.drop('authors_parsed', axis=1, inplace=True)
+submission_author.rename(columns={'id':'arxiv_id'}, inplace=True)
+
+submission_author.to_csv('submission_author.csv', index=False)
+```
+
+#### Step 6: Submission-category dataframe
+
+```python
+# Create submission-category table
+submission_category = arxiv_math[['id']].copy()
+submission_category['category_id'] = arxiv_math['categories'].apply(lambda x : x.split(' '))
+
+submission_category = submission_category.explode('category_id')
+
+# Only want math categories
+submission_category = submission_category[submission_category['category_id'].str.startswith('math')]
+submission_category['category_id'] = submission_category['category_id'].apply(lambda x : x[5:])
+
+submission_category.rename(columns={'id':'arxiv_id'}, inplace=True)
+
+submission_category.to_csv('submission_category.csv', index=False)
+```
 
 ## Results
 
@@ -128,18 +316,4 @@ There is a clear upwards trend in the proportion of women submitting mathematics
 There is too much uncertainty (in all aspects of this analysis) to make any quantitative conclusions about the gender division in mathematics ArXiv submissions.
 Nonetheless, this dive into the ArXiv dataset corroborates the well-known gender disparity among mathematicians.
 
-
-## Technical details
-
-Though it was an interesting project, the world hardly needs additional low-quality evidence of gender differences in STEM (actionable solutions would likely be preferable).
-My main goal was to practise my data skills.
-I will therefore describe the process:
-1. Data was collected from Kaggle in the form of a .json file.
-2. Python (Pandas) was used to filter out the mathematics submissions and process the data into tables.
-This included parsing the author names, guessing their gender, and assigning author IDs to serve as the primary key.
-![arxiv-db](https://tomjdove.github.io/TomJDove/assets/arxiv/arxiv-db.png){: style="display: block; margin: 0 auto"}
-3. The tables were loaded into Power BI desktop, which was used to create the visuals.
-The Power BI report can be found [here](https://app.powerbi.com/links/RDRqrHuPyW?ctid=149053c5-55e1-4229-a5b9-0efb72205d64&pbi_source=linkShare).
-
-All of the code can be viewed on [Github](https://github.com/TomJDove/ArXiv-Investigation).
 
