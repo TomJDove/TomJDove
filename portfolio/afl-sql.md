@@ -3,6 +3,7 @@ layout: post
 title: "AFL and SQL"
 date: 2023-07-28
 categories: 
+permalink: '/portfolio/afl-sql'
 ---
 
 Here, I use SQL to explore [this Kaggle dataset](https://www.kaggle.com/datasets/stoney71/aflstats), which gives basic match and player statistics for each AFL match from 2012 to 2021.

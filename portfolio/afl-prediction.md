@@ -2,11 +2,11 @@
 layout: post
 title: "Predicting AFL Matches"
 date: 2023-07-03
-categories: 
+permalink: '/portfolio/afl-prediction'
 ---
 
-This is my first little machine learning project. 
-My main goal was to get familiar with Sklearn and learn how to implement basic machine learning models.
+In this project, I create a machine learning model to predict the outcome of AFL matches.
+The following has been imported from a Jupyter notebook, found [here](https://github.com/TomJDove/afl_prediction).
 
 <html lang="en">
 <head><meta charset="utf-8"/>

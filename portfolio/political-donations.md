@@ -2,7 +2,7 @@
 layout: post
 title: "Who's Paying Our Pollies? A Peak Into the Transparency Register"
 date: 2023-07-28
-categories: 
+permalink: '/portfolio/political-donations'
 ---
 
 Each year, political parties and other political entities are required to declare who they've received money from (above a certain threshold) to the Australian Electoral Commission and this information is published on the AEC's [Transparency Register](https://transparency.aec.gov.au/).

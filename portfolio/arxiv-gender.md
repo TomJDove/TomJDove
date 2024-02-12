@@ -2,14 +2,8 @@
 layout: post
 title: "A Dive in the ArXiv: Gender Equality"
 date: 2023-07-04
-categories: 
+permalink: '/portfolio/arxiv-gender'
 ---
-
-<!---
-Other title ideas:
-- An ArXiv of gender equality in mathematics
-- ArXiv dive: gender equality
--->
 
 
 ## What is ArXiv?
