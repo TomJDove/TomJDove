@@ -23,7 +23,7 @@ I'm now back in Melbourne and looking for opportunities to apply my hard-earned 
 
 # Portfolio
 
-- [Drug use in Victoria - Excel dashboard](/portfolio/drugs-victoria)
+- [Drug use in Victoria - Excel dashboard](/TomJDove/portfolio/drugs-victoria)
 
 - [A dive in the ArXiv: Determining gender inequality in mathematics using ArXiv data](/portfolio/arxiv-gender)
 
