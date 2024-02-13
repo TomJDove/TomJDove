@@ -41,7 +41,7 @@ The Australian Electoral Commission publishes annual data on politicaldonations
 - [Using machine learning to predict AFL matches](/TomJDove/portfolio/afl-prediction) \\
 I train a machine learning model to predict the outcome of an AFL match. 
   
-- [AFL SQL queries](/TomJDove/portfolio/afl-sql) \\
+- [AFL SQL demonstration](/TomJDove/portfolio/afl-sql) \\
 I demonstrate my SQL competence by creating and querying a basic AFL database.
 
 
