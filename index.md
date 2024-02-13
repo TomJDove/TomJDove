@@ -6,32 +6,43 @@ layout: home
 ![profilepic](docs/assets/profile.png){: width="300" style="float: left; margin-right: 3em;"}
 -->
 
-![ytmpic](docs/assets/ytm2.jpg){: width="80%" style="display: block; margin: 0 auto"}
+<!--
+![ytmpic](docs/assets/botanic.jpg){: width="60%" style="display: block; margin: 0 auto"}
+-->
+
+![ytmpic](docs/assets/ytm-cropped.jpg){: width="60%" style="display: block; margin: 0 auto"}
 
 # About
 
 <p align="justify">
-I just completed a PhD at the University of Göttingen, working under the supervision of Thomas Schick. 
+I recently completed a PhD at the University of Göttingen, working under the supervision of Thomas Schick. 
 In plain language, I studied the underlying shape and symmetry of spacetime models and the mathematical structures that classify their properties.
 More precisely, my research interests lie in algebraic topology, in particular twisted K-theory and topological T-duality.
-My thesis work is about the equivariant versions of these concepts.
+My thesis was about the equivariant versions of these concepts.
 </p>
 
 <p align="justify">
-I'm now back in Melbourne and looking for opportunities to apply my hard-earned skills to solve real-world problems.
+I'm now back in Melbourne and looking for opportunities to apply my hard-earned skills to new and exciting problems.
 </p>
 
 # Portfolio
 
-- [Drug use in Victoria - Excel dashboard](/TomJDove/portfolio/drugs-victoria)
+- [Drug use in Victoria - Excel dashboards](/TomJDove/portfolio/drugs-victoria) \\
+    I create two Excel dashboards on drug use in Victoria using data on ambulance attendances and hospital admissions.
 
-- [A dive in the ArXiv: Determining gender inequality in mathematics using ArXiv data](/TomJDove/portfolio/arxiv-gender)
+- [What the ArXiv metadata says about gender equality in mathematics](/TomJDove/portfolio/arxiv-gender) \\
+    Using metadata on ArXiv, the largest repository of mathematical
+research articles, I used author names to obtain an approximation of the proportion of mathematicians who are
+women.
 
-- [Who's paying our pollies? A dashboard on political donations in Australia](/TomJDove/portfolio/political-donations)
+- [Who's paying our pollies? A dashboard on political donations in Australia](/TomJDove/portfolio/political-donations) \\
+The Australian Electoral Commission publishes annual data on politicaldonations. I investigate the data and present a dashboard summarising the findings.
 
-- [Predicting AFL matches - machine learning project](/TomJDove/portfolio/afl-prediction)
+- [Using machine learning to predict AFL matches](/TomJDove/portfolio/afl-prediction) \\
+I train a machine learning model to predict the outcome of an AFL match. 
   
-- [AFL SQL queries](/TomJDove/portfolio/afl-sql)
+- [AFL SQL queries](/TomJDove/portfolio/afl-sql) \\
+I demonstrate my SQL competence by creating and querying a basic AFL database.
 
 
 # Education
@@ -46,17 +57,13 @@ Average grade of 91%.
 
 - **Diploma of Informatics**, 2015-2017 \\
 University of Melbourne, Melbourne, Australia \\
-Included courses:
-    - Database Systems
-    - Software Modelling and Design
-    - Artificial Intelligence   
-&nbsp; 
+*Included courses: Software Modelling and Design, Models of Computation, Artificial Intelligence, Computer Systems, Database Systems, Object Oriented Software Development, Design of Algorithms*
 
 - **Bachelor of Science (Mathematics and Statistics)**, 2015-2017 \\
 University of Melbourne, Melbourne, Australia
 
 
-# Papers
+# Research papers
 
 - [A fixed point decomposition of twisted equivariant K-theory](https://arxiv.org/abs/2202.05788) (with Thomas Schick and Mario Velásquez). Proc. Amer. Math. Soc. 151 (2023), 4593-4606
 

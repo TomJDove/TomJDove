@@ -95,8 +95,10 @@ ORDER BY season;
 </figure>
 </center>
 
+<p align='justify'>
 Here, we see the effect of COVID in 2020.
 The missing game in 2015 stands out: a match between Adelaide and Geelong was cancelled due to the death of Phil Walsh, Adelaide's coach.
+</p>
 
 
 ```sql
@@ -143,8 +145,10 @@ LIMIT 10;
 </figure>
 </center>
 
+<p align='justify'>
 In recent years, no player has managed to crack the fabled 100 goals in a season.
 Only 28 players have achieved this, the most recent being Lance Franklin in 2008.
+</p>
 
 ```sql
 /* Average points scored per game each year */
@@ -163,7 +167,9 @@ GROUP BY season;
 </figure>
 </center>
 
+<p align='justify'>
 To get stats on individual teams, it will be useful to separate the match data so that each entry corresponds to a single team:
+</p>
 
 
 ```sql
@@ -195,9 +201,11 @@ LIMIT 10;
 
 ## A grand prediction
 
-It's the 25th of September, 2021 and you're sitting with your family about to watch the Dees take on the Dogs in the grand final.
+<p align='justify'>
+Imaging it's the 25th of September, 2021 and you're sitting with your family about to watch the Dees take on the Dogs in the grand final.
 To impress your family with your knowledge of sports, you want to predict the winner.
 You don't actually have much knowledge of sports, but you can look at the data.
+</p>
 
 Start by seeing where each team sits on the ladder:
 
@@ -222,8 +230,10 @@ ORDER BY total_points DESC;
 
 Unsurprisingly, two grand final teams hold the top two positions on the ladder.
 
+<p align='justify'>
 A naive prediction at this point would be that Melbourne wins, but we can consider more salient statistics.
 Let's look at some basic stats for the teams' performance over the season:
+</p>
 
 ```sql
 /* Various performance metrics for the season so far */
@@ -258,11 +268,15 @@ ORDER BY team;
 </figure>
 </center>
 
+<p align='justify'>
 We already know from the ladder that Melbourne has performed better. 
 They have also done better in terms of contested possessions.
 The Bulldogs have a slightly better points differential and a few more marks inside 50, but it's not a great difference.
+</p>
 
+<p align='justify'>
 How about each teams' performance in recent games?
+</p>
 
 ```sql
 /* The total number of points scored by and against each team in the last 5 games 
@@ -296,11 +310,15 @@ GROUP BY team;
 </figure>
 </center>
 
+<p align='justify'>
 So, despite Western Bulldogs having a slightly better average point differential over the season, Melbourne has a significantly better point differential over the previous five games.
 This is likely more significant because most of these five games were played in the finals, so they could've been playing stronger teams.
+</p>
 
-Meters gained and the inside 50 mark differential tend to provide a strong link to success, at least according to [statsinsider.com](https://www.statsinsider.com.au/news/afl-stats-that-matter-what-are-the-real-performance-indicators).
+<p align='justify'>
+Meters gained and the inside 50 mark differential tend to provide a strong link to success, at least according to <a href = 'https://www.statsinsider.com.au/news/afl-stats-that-matter-what-are-the-real-performance-indicators'>statsinsider.com</a>.
 We don't have data on meters gained, but we can calculate the inside 50 mark differential:
+</p>
 
 ```sql
 /* Get marks inside 50 differential */
@@ -339,7 +357,9 @@ ORDER BY sum_marks_inside_50_diff DESC;
 </figure>
 </center>
 
+<p align='justify'>
 Indeed, if we graph the marks inside 50 differential with the performance (which is calculated as +2 points for a win and +1 for a draw), we see a correlation:
+</p>
 
 <center>
 <figure>

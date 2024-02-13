@@ -1,19 +1,58 @@
 ---
 layout: post
-title: "A Dive in the ArXiv: Gender Equality"
+title: "What the ArXiv metadata says about gender equality in mathematics"
 date: 2023-07-04
 permalink: '/portfolio/arxiv-gender'
 ---
 
+<p align='justify'>
+In this project, I use Python/Pandas and Power BI to process a large dataset of scientific papers to gain insight into gender equality among mathematics researchers.
+</p>
+
+<p align='justify'>
+I summarised the findings in a Power BI report.
+I only have a free Power BI license, so I can't share the Power BI report directly. 
+The following are screenshots of the report:
+</p>
+
+<center>
+<figure>
+  <img
+  src="/assets/arxiv/report1.jpg"
+  style="width:100%"
+  >
+  <figcaption>
+    The first page of the report, which gives an overview of submissions.
+  </figcaption>
+</figure>
+</center>
+
+<center>
+<figure>
+  <img
+  src="/assets/arxiv/report2.jpg"
+  style="width:100%"
+  >
+  <figcaption>
+  The second page, which has information on the gender proportion of the authors.
+  </figcaption>
+</figure>
+</center>
+
+To start, let me explain what the ArXiv is and the methods I used.
 
 ## What is ArXiv?
 
+<p align='justify'>
 Owned and operated by Cornell University, ArXiv is an open-access repository of scientific papers in fields ranging from mathematics and physics to quantitative biology and economics.
 First established in 1991, it now holds over 2 million scholarly articles, and almost every mathematics paper that is written will be uploaded to ArXiv.
+</p>
 
-To make ArXiv more accessible, Cornell has shared the metadata of its submissions on [Kaggle](https://www.kaggle.com/datasets/Cornell-University/arxiv).
+<p align='justify'>
+To make ArXiv more accessible, Cornell has shared the metadata of its submissions on <a href='https://www.kaggle.com/datasets/Cornell-University/arxiv'> Kaggle </a>
 Here, you can view information about each of the 1.7 million submissions, including the title, abstract, author names, and submission date.
 You can also do some calculations; for example, there are currently almost 45,000 mathematics papers uploaded each year:
+</p>
 
 <center>
 <figure>
@@ -27,75 +66,115 @@ You can also do some calculations; for example, there are currently almost 45,00
 </figure>
 </center>
 
-There are other cool observations to be made in this trove of data.
+<p align='justify'>
+There are other interesting observations to be made in this trove of data.
 For example, of the 594,000ish total submissions, almost a quarter had journal references, which means they were likely published in a peer-reviewed journal.
 Even more interestingly, the annual proportion of submissions with journal references has dramatically declined in the last two decades.
 As we see in the above chart, it starts at around 40% and has plummeted to below 10%.
 Does this indicate a rise in hobbyist mathematics posting papers to ArXiv?
+</p>
 
+<p align='justify'>
 Another fun fact: since there are currently about 594,000 mathematics posts on ArXiv, a lucky mathematician will soon post the 600,000th mathematics paper to ArXiv (congratulations to this person).
+</p>
 
-Putting fun aside, I wanted to get something more meaningful from the ArXiv data.
+<p align='justify'>
+I want to get something more meaningful from the ArXiv data.
 Could this dataset give us any information on the gender balance in mathematics?
 An author does not submit their gender when uploading a paper, so it doesn't seem like we have much information to go on.
+</p>
 
 ## Gender inequality in mathematics
 
+<p align='justify'>
 Gender inequality is a well-known issue in STEM, and it is especially serious in mathematics.
 Despite girls performing as well if not better than boys in maths at school, the proportion of women studying and working in mathematical sciences is significantly lower than it ought to be.
+</p>
 
 If we look at the numbers for Australia, the problem is quite visible:
  - Women make up only 37% of undergraduate mathematical science degrees and 29% of postgraduate degrees, according to [STEM Women](https://www.stemwomen.com/women-in-stem-australia).
 - [Government data](https://labourmarketinsights.gov.au/occupation-profile/mathematicians?occupationCode=224112) reveals that women make up only 23% of mathematicians.
 - Only [9% of professors](https://www.sydney.edu.au/news-opinion/news/2016/03/30/australia_s-got-scientific-female-talent---heres-how-to-stop-was.html) in mathematical science are women.
 
+<p align='justify'>
 So, there is no shortage of evidence for the gender gap in mathematics, but I want to see whether it can be seen in the ArXiv data.
 The problem is that authors do not share their gender when uploading papers.
 We only have one piece of information that could indicate an author's gender: their first name.
+</p>
 
 ## Getting on a first-name basis
 
+<p align='justify'>
 The idea is to use the first names of the authors to get a very (repeat *very*) crude idea of the gender disparity in ArXiv postings.
 I figure that, for certain names, one could take a reasonable guess at which gender this person identifies as.
 If an author's name is Thomas, for example, they will probably (if not necessarily) identify as a man.
+</p>
 
+<p align='justify'>
 There are indeed commercially available tools to achieve this.
-[Gender Guesser](https://gender-guesser.com/) claims to be the best on the market: 8 billion names processed in 22 alphabets, contributions to scientific research, and a slew of fancy academic and corporate users.
-With thousands of names to process and a PhD student salary, I decided to use the freely available Python package [gender-guesser](https://github.com/lead-ratings/gender-guesser), which is based on a comparatively tiny dataset of 40,000 names collected by a man named Jorg Michael.
+<a href = 'https://gender-guesser.com/'>Gender Guesser</a> claims to be the best on the market: 8 billion names processed in 22 alphabets, contributions to scientific research, and a slew of fancy academic and corporate users.
+With thousands of names to process and a PhD student salary, I decided to use the freely available Python package <a href = 'https://github.com/lead-ratings/gender-guesser'>gender-guesser</a>, which is based on a comparatively tiny dataset of 40,000 names collected by a man named Jorg Michael.
+</p>
 
+<p align='justify'>
 The Python package assigns a name to one of five categories: male, mostly male, unknown, mostly female, and female.
 I simplified this to three categories: man, unknown, and woman, with the 'mostly' entries being put into the unknown category.
+</p>
 
-Now, this method is riddled with flaws and limitations:
+Now, this method has several flaws and limitations:
 - It excludes those who don't identify as either a man or a woman.
-- Some names are commonly used by people of all genders and so even with the best possible methods we couldn't determine their gender.
+- Some names are commonly used by people of all genders so even with the best possible methods we couldn't determine their gender.
 - Many authors prefer to just give their first initial or submit their name in some non-standard way, which messes the data up.
 
+<p align='justify'>
 So, we certainly shouldn't be using this method to produce any hard quantitative conclusions.
 Nonetheless, if there's a very clear gender disparity, we might be able to pick up on it.
+</p>
 
 
 ## Data processing
 
-We need to process [ArXiv dataset](https://www.kaggle.com/datasets/Cornell-University/arxiv) from Kaggle into tables more suitable for data analysis (e.g. to add to a database or open in Power BI).
+<p align='justify'>
+The first thing we need to do is process the <a href = 'https://www.kaggle.com/datasets/Cornell-University/arxiv'>ArXiv dataset</a> from Kaggle into tables more suitable for data analysis (e.g. to add to a database or open in Power BI).
+</p>
 
+<p align='justify'>
 The data begins as a single table with the ArXiv ID, submitter, authors, title, comments, journal reference, doi, report-no, categories, license, abstract, versions, update date, and a list of the authors in a parsed format.
+</p>
 
-This data is processed into five tables:
+This data will be processed into five tables:
 - Submission, to record the submissions themselves
 - Category, to record the categories a submission can be labelled as
 - Author, to record the authors of the papers
-- Submission-Category, to capture many-to-many relationship between a Submission and its Categories.
-- Submission-Author, to capture the many-to-many realtionship between Submission and Author.
+- Submission-Category, to capture the many-to-many relationship between a submission and its categories.
+- Submission-Author, to capture the many-to-many relationship between Submission and Author.
 
 ![arxiv-db](https://tomjdove.github.io/TomJDove/assets/arxiv/arxiv-db.png){: style="display: block; margin: 0 auto"}
 
+<p align='justify'>
 The dataset is quite large, so some of the computations take some time (but not 'leave your computer on overnight' time).
-All of the code can be viewed on [Github](https://github.com/TomJDove/ArXiv-Investigation).
+All of the code can be viewed on <a href = 'https://github.com/TomJDove/ArXiv-Investigation'>Github</a>.
+</p>
+
+<p align='justify'>
+The processing will be done in six steps; the first filters out only the mathematics papers from the ArXiv dataset and then each of the five tables is created one by one.
+</p>
+
+```python
+# Import required packages
+import pandas as pd
+import csv
+from datetime import datetime
+from dateutil import parser
+from collections import defaultdict
+import gender_guesser.detector as gender
+```
 
 #### Step 1: Filtering out maths submissions
 
-The ArXiv dataset contains papers from a number of different sciences, but we only need the mathematics ones.
+<p align='justify'>
+The ArXiv dataset contains papers from several different fields, but we only need the mathematics ones.
+</p>
 
 ```python
 # Determine whether a paper is a maths paper
@@ -128,11 +207,11 @@ def loadArxivData(file, catFilter = lambda x : True, cols=None):
 fileName = 'data/arxiv-metadata-oai-snapshot.json'
 arxiv_math = loadArxivData(fileName, catFilter = isMathCategory)
 
-# Save to csv so that we don't need to re-collect the data
+# Save to csv so that we don't need to re-collect the data each time
 arxiv_math.to_csv('data/arxiv-math.csv', index=False)
 ```
 
-#### Step 2: Submissions dataframe
+#### Step 2: Submissions table
 
 ```python
 # Get date of first submisson
@@ -143,9 +222,11 @@ arxiv_math['submission_date'] = arxiv_math['versions'].apply(lambda x : datetime
 submission_cols = ['id', 'submission_date', 'title', 'abstract', 'journal-ref', 'comments']
 submission = arxiv_math[submission_cols].copy()
 submission.rename(columns={'id':'arxiv_id'})
+
+submission.to_csv('data/submission.csv', index=False, quoting=csv.QUOTE_NONNUMERIC)
 ```
 
-#### Step 3: Category dataframe
+#### Step 3: Category table
 
 ```python
 # Create the category table, starting with the category names and acronyms (to be used as a primary key)
@@ -187,7 +268,13 @@ category = pd.DataFrame(category_dict.items(), columns = ['category_id', 'catego
 category.to_csv('data/category.csv', index=False)
 ```
 
-#### Step 4: Author dataframe
+#### Step 4: Author table
+
+<p align='justify'>
+This is the step where I use the authors first names to guess their genders.
+I started by parsing the authors first and last names:
+</p>
+
 
 ```python
 # Create author table
@@ -204,6 +291,10 @@ author['first_name'] = pd.Series([name[1] for name in unique_names])
 author['author_id'] = author.index
 author = author[['author_id', 'surname', 'first_name']]
 ```
+<p align='justify'>
+Next, I got a list of unique first names and applied the gender detector ot each of them.
+The result was stored in a dictionary, which was used to add the genders of each of the authors in the author table.
+</p>
 
 ```python
 # Add genders
@@ -226,7 +317,7 @@ author.loc[(author['gender'] != 'male') & (author['gender'] != 'female'),'gender
 author.to_csv('author.csv', index=False)
 ```
 
-#### Step 5: Submission-author dataframe
+#### Step 5: Submission-author table
 
 ```python
 # Create a dict to map author name to index
@@ -245,7 +336,7 @@ submission_author.rename(columns={'id':'arxiv_id'}, inplace=True)
 submission_author.to_csv('submission_author.csv', index=False)
 ```
 
-#### Step 6: Submission-category dataframe
+#### Step 6: Submission-category table
 
 ```python
 # Create submission-category table
@@ -263,7 +354,13 @@ submission_category.rename(columns={'id':'arxiv_id'}, inplace=True)
 submission_category.to_csv('submission_category.csv', index=False)
 ```
 
+<p align='justify'>
+We now have all of the data processed into nice tables. 
+I next uploaded the tables into Power BI to analyse the data.
+</p>
+
 ## Results
+
 
 Let's first look at the gender division of all of the authors:
 
@@ -279,15 +376,21 @@ Let's first look at the gender division of all of the authors:
 </figure>
 </center>
 
+<p align='justify'>
 The first thing to notice is that 43% of the names couldn't reasonably be used to guess a gender.
 Likely their name was androgynous, unknown, or entered as an initial.
+</p>
 
+<p align='justify'>
 Otherwise, the difference is stark: 47% are men and 11% are women.
 Of the authors whose gender we could reasonably guess, less than 1 in 4 are women.
 It might be reasonable to assume the unknown authors have a similar gender split.
 If we generously assumed that the unknown authors were half men and half women, women would still only make up a third of authors.
+</p>
 
+<p align='justify'>
 If we consider the change in proportions over time, there is some room for optimism:
+</p>
 
 <center>
 <figure>
@@ -298,7 +401,9 @@ If we consider the change in proportions over time, there is some room for optim
 </figure>
 </center>
 
+<p align='justify'>
 If we graph only the proportion of women then we see a steady increase:
+</p>
 
 <center>
 <figure>
@@ -311,9 +416,13 @@ If we graph only the proportion of women then we see a steady increase:
 </figure>
 </center>
 
-There is a clear upwards trend in the proportion of women submitting mathematics papers.
+<p align='justify'>
+There is a clear upward trend in the proportion of women submitting mathematics papers.
+</p>
 
+<p align='justify'>
 There is too much uncertainty (in all aspects of this analysis) to make any quantitative conclusions about the gender division in mathematics ArXiv submissions.
 Nonetheless, this dive into the ArXiv dataset corroborates the well-known gender disparity among mathematicians.
+</p>
 
 
