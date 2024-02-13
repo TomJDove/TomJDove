@@ -2,7 +2,7 @@
 layout: post
 title: "Who's Paying Our Pollies? A Peak Into the Transparency Register"
 date: 2023-07-28
-permalink: '/TomJDove/2023/07/28/Transparency'
+permalink: '/2023/07/28/Transparency'
 ---
 
 <p align='justify'>
