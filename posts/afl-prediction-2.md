@@ -2,7 +2,7 @@
 layout: post
 title: "Predicting AFL Matches"
 date: 2023-07-03
-permalink: '/2023/07/03/AFL-Prediction.html'
+permalink: '/2023/07/03/AFL-Prediction'
 ---
 
 In this project, I create a machine learning model to predict the outcome of AFL matches.

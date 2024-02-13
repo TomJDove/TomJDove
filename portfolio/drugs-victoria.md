@@ -5,9 +5,11 @@ date: 2023-10-12
 categories: 
 permalink: '/portfolio/drugs-victoria'
 ---
-I created two dashboards in Excel to explore the data on ambulance drug attendances and hospital admissions compiled by [AODstats.org.au](AODstats).
-I've uploaded the Excel workbook to my Google drive [here](https://drive.google.com/file/d/1YPFZAZQMgdFiQsO5bCOzTSJrrcVuKVxu/view?usp=sharing).
+<p align='justify'>
+I created two dashboards in Excel to explore the data on ambulance drug attendances and hospital admissions compiled by <a href="https://AODstats.org.au">AODstats</a>.
+I've uploaded the Excel workbook to my Google drive <a href="https://drive.google.com/file/d/1YPFZAZQMgdFiQsO5bCOzTSJrrcVuKVxu/view?usp=sharing">here</a>.
 The first dashboard looks at the Victoria-wide statistics and the second looks at the statistics for individual drugs.
+</p>
 
 To get an idea of what the dahsboards look like, here are some pictures:
 
