@@ -18,7 +18,7 @@ The following are screenshots of the report:
 <center>
 <figure>
   <img
-  src="/assets/arxiv/report1.jpg"
+  src="https://tomjdove.github.io/TomJDove/assets/arxiv/report1.jpg"
   style="width:100%"
   >
   <figcaption>
@@ -30,7 +30,7 @@ The following are screenshots of the report:
 <center>
 <figure>
   <img
-  src="/assets/arxiv/report2.jpg"
+  src="https://tomjdove.github.io/TomJDove/assets/arxiv/report2.jpg"
   style="width:100%"
   >
   <figcaption>
