@@ -314,7 +314,7 @@ mysqli_close($con);
 ## Virtual car maze traversal
 
 **Course:** Software Modelling and Design \\
-**Programming languages:** Java \\
+**Programming language:** Java \\
 **Concepts:** Object-oriented software design, GRASP, diagrams (class diagrams, sequence diagrams, communication diagrams)
 
 <p align='justify'>
