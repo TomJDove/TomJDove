@@ -44,6 +44,9 @@ I train a machine learning model to predict the outcome of an AFL match.
 - [AFL SQL demonstration](/TomJDove/portfolio/afl-sql) \\
 I demonstrate my SQL competence by creating and querying a basic AFL database.
 
+- [University projects](/TomJDove/portfolio/university-projects) \\
+I describe some of the projects I did in university: an RPG game in Java, a multithreaded TCP server implementing a proof-of-work algorithm, a simple web application with a database backend, and a controller for a car to traverse a maze. 
+
 
 # Education
 
