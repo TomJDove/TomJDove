@@ -8,12 +8,14 @@ permalink: '/portfolio/quantium'
 <p align='justify'>
 I have completed the <a href='https://www.theforage.com/simulations/quantium/data-analytics-rqkb'>Quantium Virtual Internship</a>, which is a job simulation focusing on data analytics and commercial insights.
 The code is available in Jupyter notebooks, as well as exported PDFs, in the following <a href='https://github.com/TomJDove/quantium-virtual-internship'>GitHub repository</a>.
+I completed the project using Python, in particular Pandas for the data analysis and Seaborn for the visualisations.
 </p>
 
 <p align='justify'>
 The setup for the internship was the following: the retail analytics team and have been approached by a supermarket client that wants to better understand the types of customers who purchase chips and their chip purchasing behaviour within the region.
 The insights from our analyses will feed into the supermarket's strategic plan for selling chips in the next half year.
 </p>
+
 
 ### Task 1 - Data preparation and customer analytics
 
