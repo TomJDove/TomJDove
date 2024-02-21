@@ -5,6 +5,10 @@ menu: main
 permalink: /portfolio
 ---
 
+- [Quantium Virtual Internship](/TomJDove/portfolio/quantium) \\
+Completed a job simulation focused on data analytics and commercial insights. 
+Analysed transaction and customer data to give insights on customer segmentation and purchasing behaviour and identified benchmark stores for conducting uplift testing on trial stores.
+
 - [Drug use in Victoria - Excel dashboards](/TomJDove/portfolio/drugs-victoria) \\
     I create two Excel dashboards on drug use in Victoria using data on ambulance attendances and hospital admissions.
 
