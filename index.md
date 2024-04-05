@@ -15,6 +15,10 @@ layout: home
 # About
 
 <p align="justify">
+I'm an experienced researcher with a mathematics and informatics background. I'm passionate about using my analytic, data and programming skills to solve real-world problems that make a positive impact.
+</p>
+
+<p align="justify">
 I recently completed a PhD at the University of Göttingen, working under the supervision of Thomas Schick. 
 In plain language, I studied the underlying shape and symmetry of spacetime models and the mathematical structures that classify their properties.
 More precisely, my research interests lie in algebraic topology, in particular twisted K-theory and topological T-duality.
@@ -22,7 +26,7 @@ My thesis was about the equivariant versions of these concepts.
 </p>
 
 <p align="justify">
-I'm now back in Melbourne and looking for opportunities to apply my hard-earned skills to new and exciting problems.
+I'm now back in Melbourne and looking for opportunities to apply my unique blend of expertise to new and exciting problems.
 </p>
 
 # Portfolio
