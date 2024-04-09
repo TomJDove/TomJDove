@@ -13,7 +13,19 @@ The following are screenshots of the report:
 <center>
 <figure>
   <img
-  src="https://tomjdove.github.io/TomJDove/assets/arxiv/report1.jpg"
+  src="/assets/arxiv/report1-updated.jpg"
+  style="width:100%"
+  >
+  <figcaption>
+    The first page of the report, which gives a description of the project.
+  </figcaption>
+</figure>
+</center>
+
+<center>
+<figure>
+  <img
+  src="/assets/arxiv/report2-updated.jpg"
   style="width:100%"
   >
   <figcaption>
@@ -25,7 +37,7 @@ The following are screenshots of the report:
 <center>
 <figure>
   <img
-  src="https://tomjdove.github.io/TomJDove/assets/arxiv/report2.jpg"
+  src="/assets/arxiv/report3-updated.jpg"
   style="width:100%"
   >
   <figcaption>
