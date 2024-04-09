@@ -6,12 +6,7 @@ permalink: '/portfolio/arxiv-gender'
 ---
 
 <p align='justify'>
-In this project, I use Python/Pandas and Power BI to process a large dataset of scientific papers to gain insight into gender equality among mathematics researchers.
-</p>
-
-<p align='justify'>
-I summarised the findings in a Power BI report.
-I only have a free Power BI license, so I can't share the Power BI report directly. 
+In this project, I use Python/Pandas and Power BI to process a large dataset of scientific papers to gain insight into gender equality among mathematics researchers. The code can be viewed below or in the following <a href='https://github.com/TomJDove/ArXiv-Investigation'> Github repository </a>, together with a Power BI report summarising my findings.
 The following are screenshots of the report:
 </p>
 
