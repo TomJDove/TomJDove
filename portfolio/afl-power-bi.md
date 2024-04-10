@@ -19,7 +19,7 @@ Features of the report include:
 <center>
 <figure>
   <img
-  src="https://tomjdove.github.io/TomJDovehttps://tomjdove.github.io/TomJDove/assets/afl-power-bi/report1.jpg"
+  src="https://tomjdove.github.io/TomJDove/assets/afl-power-bi/report1.jpg"
   style="width:100%"
   >
   <figcaption>
@@ -31,7 +31,7 @@ Features of the report include:
 <center>
 <figure>
   <img
-  src="https://tomjdove.github.io/TomJDovehttps://tomjdove.github.io/TomJDove/assets/afl-power-bi/report2.jpg"
+  src="https://tomjdove.github.io/TomJDove/assets/afl-power-bi/report2.jpg"
   style="width:100%"
   >
   <figcaption>
@@ -44,7 +44,7 @@ Features of the report include:
 <center>
 <figure>
   <img
-  src="https://tomjdove.github.io/TomJDovehttps://tomjdove.github.io/TomJDove/assets/afl-power-bi/report3.png"
+  src="https://tomjdove.github.io/TomJDove/assets/afl-power-bi/report3.png"
   style="width:100%"
   >
   <figcaption>
@@ -58,7 +58,7 @@ One can select the arrow in the player comparision visual to get a full list of 
 <center>
 <figure>
   <img
-  src="https://tomjdove.github.io/TomJDovehttps://tomjdove.github.io/TomJDove/assets/afl-power-bi/report3-comp.png"
+  src="https://tomjdove.github.io/TomJDove/assets/afl-power-bi/report3-comp.png"
   style="width:100%"
   >
 </figure>
@@ -69,7 +69,7 @@ The following is the data model used to make the report:
 <center>
 <figure>
   <img
-  src="https://tomjdove.github.io/TomJDovehttps://tomjdove.github.io/TomJDove/assets/afl-power-bi/data model.png"
+  src="https://tomjdove.github.io/TomJDove/assets/afl-power-bi/data model.png"
   style="width:100%"
   >
 </figure>

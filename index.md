@@ -35,8 +35,11 @@ I'm now back in Melbourne and looking for opportunities to apply my unique blend
 Completed a job simulation focused on data analytics and commercial insights. 
 Analysed transaction and customer data to give insights on customer segmentation and purchasing behaviour and identified benchmark stores for conducting uplift testing on trial stores.
 
+- [AFL Power BI Report](/TomJDove/portfolio/afl-power-bi) \\
+I created an interactive Power BI report to investigate AFL statistics at a season, team, and player level.
+
 - [Drug use in Victoria - Excel dashboards](/TomJDove/portfolio/drugs-victoria) \\
-    I create two Excel dashboards on drug use in Victoria using data on ambulance attendances and hospital admissions.
+    I created two Excel dashboards on drug use in Victoria using data on ambulance attendances and hospital admissions.
 
 - [What the ArXiv metadata says about gender equality in mathematics](/TomJDove/portfolio/arxiv-gender) \\
     Using metadata on ArXiv, the largest repository of mathematical
