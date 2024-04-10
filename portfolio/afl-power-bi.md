@@ -12,8 +12,8 @@ Screenshots of the report can be found below.
 </p>
 
 Features of the report include: 
-    - Navigation buttons on the left hand side.
-    - Disconnected tables used to make side by side team comparisons.
+    - Navigation buttons on the left-hand side.
+    - Disconnected tables used to make side-by-side team comparisons.
     - Interactive buttons using bookmarks.
 
 <center>
@@ -53,7 +53,7 @@ Features of the report include:
 </figure>
 </center>
 
-One can select the arrow in the player comparision visual to get a full list of players:
+One can select the arrow in the player comparison visual to get a full list of players:
 
 <center>
 <figure>
