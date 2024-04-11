@@ -106,3 +106,14 @@ FROM game
 );
 
 ```
+
+<p align='justify'>
+The problem this solved was that it is inconvenient to analyse individual teams when match data is provided via a pair of teams (the home and away teams). 
+Modelling the database in this way separates the match information from the performance of the individual teams, which is more suitable in cases where we, for example, want to find match statistics for a specific team.
+</p>
+
+<p align='justify'>
+Adding a dimension table containing a list of all the teams further allows us to conveniently filter by individual teams.
+The two disconnected team slicer tables, when coupled with the right measures, are used to allow the user to directly two chosen teams.
+</p>
+
