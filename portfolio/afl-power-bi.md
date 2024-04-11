@@ -74,3 +74,35 @@ The following is the data model used to make the report:
   >
 </figure>
 </center>
+
+<p align='justify'>
+The data was accessed from the MySQL database created for my <a href='https://tomjdove.github.io/TomJDove/portfolio/afl-sql'>AFL SQL demonstration</a>.
+To make the data model better suited for Power BI, I created two new tables, which became the 'Matches' and 'Match Team Score' tables above:
+</p>
+
+```sql
+CREATE TABLE match_info
+SELECT 
+    gameID, round, match_date, venue, startTime, attendance, rainfall
+FROM game;
+
+CREATE TABLE team_match_outcome 
+(
+SELECT 
+    gameID, 
+    homeTeam AS team, 
+    homeTeamScore AS score, 
+    'Home' as HomeAway
+FROM game
+)
+UNION
+(
+SELECT 
+    gameID, 
+    awayTeam AS team, 
+    awayTeamScore AS score, 
+    'Away' as HomeAway
+FROM game
+);
+
+```
