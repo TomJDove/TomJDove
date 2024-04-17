@@ -6,11 +6,11 @@ layout: home
 ![profilepic](docs/assets/profile.png){: width="300" style="float: left; margin-right: 3em;"}
 -->
 
-<!--
-![ytmpic](docs/assets/botanic.jpg){: width="60%" style="display: block; margin: 0 auto"}
--->
+![profile](docs/assets/botanic.jpg){: width="50%" style="display: block; margin: 0 auto"}
 
+<!--
 ![ytmpic](docs/assets/ytm-cropped.jpg){: width="60%" style="display: block; margin: 0 auto"}
+-->
 
 # About
 
@@ -25,9 +25,6 @@ More precisely, my research interests lie in algebraic topology, in particular t
 My thesis was about the equivariant versions of these concepts.
 </p>
 
-<p align="justify">
-I'm now back in Melbourne and looking for opportunities to apply my unique blend of expertise to new and exciting problems.
-</p>
 
 # Portfolio
 
