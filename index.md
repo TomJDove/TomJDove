@@ -2,7 +2,7 @@
 layout: home
 ---
 
-![profile](docs/assets/profile.JPG){: width="50%" style="display: block; margin: 0 auto"}
+![profile](docs/assets/profile-cropped.JPG){: width="50%" style="display: block; margin: 0 auto"}
 
 
 
