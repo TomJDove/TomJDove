@@ -2,15 +2,8 @@
 layout: home
 ---
 
-<!--
-![profilepic](docs/assets/profile.png){: width="300" style="float: left; margin-right: 3em;"}
--->
+![profile](docs/assets/profile.png){: width="50%" style="display: block; margin: 0 auto"}
 
-![profile](docs/assets/botanic.jpg){: width="50%" style="display: block; margin: 0 auto"}
-
-<!--
-![ytmpic](docs/assets/ytm-cropped.jpg){: width="60%" style="display: block; margin: 0 auto"}
--->
 
 
 # About
