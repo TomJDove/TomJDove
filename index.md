@@ -8,10 +8,9 @@ layout: home
 
 # About
 
-<p align="justify">
+
 I'm a software developer with a PhD in mathematics.
 I work for [Biarri Networks](https://biarrinetworks.com/).
-</p>
 
 <p align="justify">
 I completed a PhD at the University of Göttingen, working under the supervision of Thomas Schick. 
