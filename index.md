@@ -10,7 +10,7 @@ layout: home
 
 <p align="justify">
 I'm a software developer with a PhD in mathematics.
-I'm passionate about using my analytic, data, and programming skills to solve real-world problems that make a positive impact.
+I work for [Biarri Networks](https://biarrinetworks.com/).
 </p>
 
 <p align="justify">
